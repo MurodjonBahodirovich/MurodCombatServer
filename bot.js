@@ -1,4 +1,16 @@
 const { Telegraf } = require("telegraf");
+const axios = require("axios");
+const express = require("express");
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
+app.listen(3000, () => {
+  console.log("Starting server");
+});
 
 const TOKEN = "7162733485:AAE7qf0rbq258QuYM6WepPK4hOLh4htUHZA";
 const bot = new Telegraf(TOKEN);
